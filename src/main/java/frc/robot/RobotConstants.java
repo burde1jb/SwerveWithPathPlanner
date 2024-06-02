@@ -125,7 +125,7 @@ public class RobotConstants {
     public final static double shooterrangeOffset = 0.03;
 
     //Power values for motors
-    public final static double newshooterspeed = -0.70;
+    public final static double newshooterspeed = 0.70;
     public final static double indexerspeed = 1;
     public final static double tiltUppower = 0.2;
     public final static double tiltDownpower = -0.2;

@@ -59,7 +59,7 @@ public class NewShooterSubsystem extends SubsystemBase {
 
     public void newshooterOn() {
         shooterMotor3.set(RobotConstants.shooterspeed);
-        shooterMotor4.set(-RobotConstants.shooterspeed); 
+        shooterMotor4.set(RobotConstants.shooterspeed); 
     }
 
     public void indexOn(){
