@@ -90,7 +90,7 @@ public class RobotConstants {
     //Climber Constants
     //CAN, PWM, DIO values for motors, encoders, and sensors
     public final static int climberCANid = 40;
-    public final static int climbersensorDIOid = 4;
+    public final static int climbersensorDIOid = 6;
 
     //Values for encoders - Offsets used to make end values between 0 and 1
     public final static double climberencoderOffset = 20.00;

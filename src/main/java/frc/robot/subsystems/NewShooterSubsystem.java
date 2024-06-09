@@ -32,7 +32,7 @@ public class NewShooterSubsystem extends SubsystemBase {
 
     public void goToshot(double degrees)  {
         
-        var position = (shooterEncoder.getAbsolutePosition() + shooterencoderOffset) % 1;
+        var position = ((shooterEncoder.getAbsolutePosition() + shooterencoderOffset) % 1);
         
         if (position > (degrees + shooterrangeOffset + shooterencoderOffset) % 1) {
             this.tiltUp(RobotConstants.tiltUppower);
@@ -81,6 +81,6 @@ public class NewShooterSubsystem extends SubsystemBase {
     
     @Override
     public void periodic()  {
-        SmartDashboard.putNumber("Sensor", shooterEncoder.get());
+        SmartDashboard.putNumber("Shooter Encoder", shooterEncoder.get());
     }
 }
