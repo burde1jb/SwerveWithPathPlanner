@@ -45,7 +45,7 @@ public class TunerConstants {
     // This may need to be tuned to your individual robot
     private static final double kCoupleRatio = 3.5;
 
-    private static final double kDriveGearRatio = 6.75;
+    private static final double kDriveGearRatio = 6.12;
     private static final double kSteerGearRatio = 15.42857143;
     private static final double kWheelRadiusInches = 1.96; // Estimated at first, then fudge-factored to make odom match record
 
@@ -53,7 +53,7 @@ public class TunerConstants {
     private static final boolean kInvertLeftSide = false;
     private static final boolean kInvertRightSide = true;
 
-    private static final String kCANbusName = "rio";
+    private static final String kCANbusName = "drivetrain";
     private static final int kPigeonId = 0;
 
 
