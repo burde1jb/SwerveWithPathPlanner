@@ -16,6 +16,7 @@ public class NewShooterSubsystem extends SubsystemBase {
     CANSparkFlex shootertilt;
     CANSparkFlex indexer;
     DutyCycleEncoder shooterEncoder;
+    public DigitalInput sensor;
 
     private final double shooterencoderOffset = RobotConstants.shooterencoderOffset;
     private final double shooterrangeOffset = RobotConstants.shooterrangeOffset;
@@ -28,6 +29,8 @@ public class NewShooterSubsystem extends SubsystemBase {
         indexer = new CANSparkFlex(RobotConstants.indexerCANid, MotorType.kBrushless);
 
         shooterEncoder = new DutyCycleEncoder(RobotConstants.shooterEncoderDIOid);
+
+        sensor = new DigitalInput(RobotConstants.shooterSensorDIOid);
     }
 
     public void goToshot(double degrees)  {
@@ -82,5 +85,6 @@ public class NewShooterSubsystem extends SubsystemBase {
     @Override
     public void periodic()  {
         SmartDashboard.putNumber("Shooter Encoder", shooterEncoder.get());
+        SmartDashboard.putBoolean("Shooter Sensor", sensor.get());
     }
 }

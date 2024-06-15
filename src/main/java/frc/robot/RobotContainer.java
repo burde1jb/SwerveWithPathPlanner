@@ -35,7 +35,7 @@ import frc.robot.subsystems.IntakeSubsystem;
 import frc.robot.subsystems.LEDSubsystem;
 import frc.robot.subsystems.NewShooterSubsystem;
 import frc.robot.subsystems.RotationArmSubsystem;
-import frc.robot.subsystems.ShooterSubsystem;
+// import frc.robot.subsystems.ShooterSubsystem;
 import frc.robot.subsystems.VisionSubsystem;
 import frc.robot.subsystems.WristSubsystem;
 
@@ -68,7 +68,7 @@ public class RobotContainer {
   private final VisionSubsystem vSub;
   private final RotationArmSubsystem rSub;
   private final ClimberSubsystem cSub;
-  private final ShooterSubsystem sSub;
+  // private final ShooterSubsystem sSub;
   private final NewShooterSubsystem nsSub;
   private final LEDSubsystem lSub;
 
@@ -106,7 +106,7 @@ public class RobotContainer {
     this.vSub = new VisionSubsystem();
     this.rSub = new RotationArmSubsystem();
     this.cSub = new ClimberSubsystem();
-    this.sSub = new ShooterSubsystem();
+    // this.sSub = new ShooterSubsystem();
     this.nsSub = new NewShooterSubsystem();
     this.lSub = new LEDSubsystem();
 
@@ -114,8 +114,8 @@ public class RobotContainer {
     NamedCommands.registerCommand("AutonArmUpCommand", new AutonArmUpCommand(rSub, wSub));
     NamedCommands.registerCommand("AutonIntakeCommand", new AutonIntakeCommand(iSub));
     NamedCommands.registerCommand("AutonTimedIntakeCommand", new AutonTimedIntakeCommand(iSub));
-    NamedCommands.registerCommand("AutonShooterCommand", new AutonShooterCommand(sSub));
-    NamedCommands.registerCommand("AutonServoCommand", new AutonServoCommand(sSub));
+    NamedCommands.registerCommand("AutonShooterCommand", new AutonShooterCommand(nsSub));
+    NamedCommands.registerCommand("AutonServoCommand", new AutonServoCommand(nsSub));
     NamedCommands.registerCommand("AutonIntakeOn", AutonIntakeOn());
     NamedCommands.registerCommand("AutonIntakeOff", AutonIntakeOff());
     NamedCommands.registerCommand("AutonSysIdDynamic", new AutonSysIdDynamicForward(drivetrain));
@@ -130,7 +130,7 @@ public class RobotContainer {
     cSub.setDefaultCommand(new ClimberCommand(cSub, driver2));
     // sSub.setDefaultCommand(new ShooterCommand(sSub, driver2));
     nsSub.setDefaultCommand(new NewShooterCommand(nsSub, driver2));
-    lSub.setDefaultCommand(new LEDCommand(lSub, driver2, sSub, iSub));
+    lSub.setDefaultCommand(new LEDCommand(lSub, driver2, nsSub, iSub));
 
     configureBindings();
   }

@@ -23,7 +23,7 @@ public class IntakeCommand extends Command {
         if (controller2.getRightBumper() && !controller2.getStartButton())   {
             intakeSubsystem.intakeOn(true);
         }
-        else if (controller2.getLeftY() > .2 || controller2.getLeftY() < -.2)   {
+        else if (controller2.getLeftX() > .2 || controller2.getLeftX() < -.2)   {
             intakeSubsystem.intakeSlow(false);
         }
         else if (controller2.getBackButton())   {

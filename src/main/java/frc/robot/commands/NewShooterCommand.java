@@ -10,7 +10,7 @@ public class NewShooterCommand extends Command {
     NewShooterSubsystem NewshooterSubsystem;
 
     XboxController controller2;
-    public NewShooterCommand(NewShooterSubsystem shooterSubsytem, XboxController controller2){
+    public NewShooterCommand(NewShooterSubsystem NewshooterSubsytem, XboxController controller2){
 
         this.NewshooterSubsystem = NewshooterSubsystem;
         this.controller2 = controller2;

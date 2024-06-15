@@ -121,19 +121,19 @@ public class RobotConstants {
     public final static int shooterEncoderDIOid = 5;
 
     //Values for encoders - Offsets used to make end values between 0 and 1
-    public final static double shooterencoderOffset = 0.30;
-    public final static double shooterrangeOffset = 0.03;
+    public final static double shooterencoderOffset = 0.00;
+    public final static double shooterrangeOffset = 0.005;
 
     //Power values for motors
-    public final static double newshooterspeed = 0.70;
-    public final static double indexerspeed = 1;
+    public final static double newshooterspeed = 1.0;
+    public final static double indexerspeed = 0.3;
     public final static double tiltUppower = 0.2;
     public final static double tiltDownpower = -0.2;
-    public final static double indexerspeedOut = -1;
+    public final static double indexerspeedOut = -0.3;
 
     //Goal values for encoder on new shooter
-    public final static double shortshot = 0.45;
-    public final static double longshot = 0.70;
+    public final static double shortshot = 0.26;
+    public final static double longshot = 0.28;
     
 
 
