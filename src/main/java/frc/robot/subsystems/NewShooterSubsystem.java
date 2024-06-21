@@ -6,6 +6,7 @@ import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.PWM;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
+import frc.robot.Robot;
 import frc.robot.RobotConstants;
 import edu.wpi.first.wpilibj.DutyCycleEncoder;
 
@@ -80,6 +81,15 @@ public class NewShooterSubsystem extends SubsystemBase {
 
     public void indexOff(){
         indexer.stopMotor();
+    }
+
+    public void indexAuton(boolean forward){
+        if (forward) {
+            indexer.set(RobotConstants.indexerspeed);
+        }
+        else {
+            indexer.set(RobotConstants.indexerspeedOut);
+        }
     }
     
     @Override
